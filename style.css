@@ -1,0 +1,187 @@
+.wrapper{
+	display: flex;
+	list-style: none;
+	margin: auto;
+    width: 50%; 
+    margin-left: 400px;
+    margin-top: 75px;
+   
+}
+
+.wrapper .icon{
+	position: relative;
+	background: #ffffff;
+	border-radius: 50%;
+	padding: 15px;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	cursor: pointer;
+	transition: all 0.2s
+		cubic-bezier(0.68, -0.55,  0.265, 1.55);
+}
+
+.wrapper .tooltip{
+	position: absolute;
+	top: 0;
+	font-size: 14px;
+	background: #ffffff;
+	color: #ffffff;
+	padding: 5px 8px;
+	border-radius: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s
+		cubic-bezier(0.68, -0.55,  0.265, 1.55);
+}
+
+.wrapper .tooltip::before{
+	position: absolute;
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: #ffffff;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%) rotate(45deg); 
+	transition: all 0.3s
+		cubic-bezier(0.68, -0.55,  0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip{
+	top: -45px;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+	text-shadow: 
+		0px -1px 0px rgba(0, 0, 0, 0.1)
+}
+
+.facebook{
+	--color: #1877F2;
+}
+.twitter{
+	--color: #1da1f2;
+}
+.instagram{
+	--color: #e4405f;
+}
+.github{
+	--color: #333333;
+}
+.youtube{
+	--color: #cd201f;
+}
+.telegram{
+	--color: #1da1f2;
+}
+
+.icon:hover,
+.icon:hover .tooltip,
+.icon:hover .tooltip::before{
+	background: var(--color);
+	color: white;
+}
+
+.box{
+	display: flex;
+	align-items: center;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+  border-radius: 5%;
+  border: 5px; border-radius: 75px;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: 5px; border-radius: 75px;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border: 5px; border-radius: 75px;
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+  border: 5px; border-radius: 75px;
+}
+
+
+.flip-card-front {
+  background-color: whitesmoke;
+  color: black;
+  border: 5px; border-radius: 75px;
+}
+
+
+.flip-card-back {
+  background-color: #E76060;
+  color: white;
+  transform: rotateY(180deg);
+  border: 5px; border-radius: 75px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+  
+  border: 5px; border-radius: 75px;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.wra{
+	display: flex;	
+    width: 50%; 
+    margin: auto;
+    margin-top: 150px;
+   
+}
+ body{
+ 	background-color: #FAA3A3;
+ }
